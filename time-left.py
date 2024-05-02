@@ -18,17 +18,26 @@ def calculate_life_metrics(dob, life_expectancy):
     
     return weeks_lived, weeks_left, life_percentage_used
 
+
+def print_boxes(weeks_lived, weeks_left):
+    return "[X] " * weeks_lived + "[ ] " * weeks_left
+
+
 def main():
     parser = argparse.ArgumentParser(description='Calculate life metrics based on date of birth and life expectancy.')
     parser.add_argument('--date-of-birth', type=str, required=True, help='Your date of birth in YYYY-MM-DD format')
     parser.add_argument('--life-expectancy', type=int, required=True, help='Your life expectancy in years')
+    parser.add_argument('--print-boxes', action="store_true", required=False, help='Print filled and empty boxes for visualisation')
 
     args = parser.parse_args()
 
     weeks_lived, weeks_left, life_percentage_used = calculate_life_metrics(args.date_of_birth, args.life_expectancy)
 
-    print(f"You have lived about {weeks_lived} weeks, you might live about {weeks_left} more.")
-    print(f"You have used {life_percentage_used:.2f}% of your estimated life expectancy.")
+    if args.print_boxes:
+        print(print_boxes(weeks_lived, weeks_left))
+    else:
+        print(f"You have lived about {weeks_lived} weeks, you might live about {weeks_left} more.")
+        print(f"You have used {life_percentage_used:.2f}% of your estimated life expectancy.")
 
 if __name__ == "__main__":
     main()
