@@ -28,6 +28,7 @@ def main():
     parser.add_argument('--date-of-birth', type=str, required=True, help='Your date of birth in YYYY-MM-DD format')
     parser.add_argument('--life-expectancy', type=int, required=True, help='Your life expectancy in years')
     parser.add_argument('--print-boxes', action="store_true", required=False, help='Print filled and empty boxes for visualisation')
+    parser.add_argument('--short', action="store_true", required=False, help='Print filled and empty boxes for visualisation')
 
     args = parser.parse_args()
 
@@ -35,6 +36,8 @@ def main():
 
     if args.print_boxes:
         print(print_boxes(weeks_lived, weeks_left))
+    elif args.short:
+        print(f"{weeks_left}w|{life_percentage_used:.2f}%")
     else:
         print(f"You have lived about {weeks_lived} weeks, you might live about {weeks_left} more.")
         print(f"You have used {life_percentage_used:.2f}% of your estimated life expectancy.")
