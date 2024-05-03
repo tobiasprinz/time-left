@@ -6,8 +6,11 @@ It is, allegedly, the most successful TED talk ever. Or maybe in the second TED 
  Anyway: Do you wanna to be reminded how much time you have left? Use this. It's a command line script with two input parameters and three modes:
 
  ## Input
- --date-of-birth=YYYY-MM-DD The only sensible date format.
- --life-expectation=xx Yeah, I am not calculating this. 
+ --date-of-birth=YYYY-MM-DD
+ 	The only sensible date format.
+
+ --life-expectation=xx
+ 	Yeah, I am not calculating this here, just put 80 there. 
 
  ## Output
  Default mode:
