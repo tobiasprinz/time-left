@@ -6,18 +6,19 @@ It is, allegedly, the most successful TED talk ever. Or maybe in the second TED 
  Anyway: Do you wanna to be reminded how much time you have left? Use this. It's a command line script with two input parameters and three modes:
 
  ## Input
- --date-of-birth=YYYY-MM-DD
+`--date-of-birth=YYYY-MM-DD`:
  	The only sensible date format.
 
- --life-expectation=xx
- 	Yeah, I am not calculating this here, just put 80 there. 
+ `--life-expectation=YY`:
+ 	Yeah, I am not calculating this here, just enter 80. 
 
  ## Output
- Default mode:
+ `Default mode`:
  	Text with lived weeks, weeks left and a percentage.
 
- --print-blocks:
+ `--print-blocks`:
  	prints blocks for every week of you life, empty for future ones.
 
- --short: Short form.
+ `--short`:
+ 	Short form.
  	For those people that like to put it into their system command prompt.
